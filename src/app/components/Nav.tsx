@@ -91,23 +91,23 @@ export const navItems = [
     item:"Home",
     link:"/"
   },
-  {id:1,
+  {id:2,
     item:"Product",
     link:"/"
   },
-  {id:1,
+  {id:3,
     item:"About us",
     link:"/"
   },
-  {id:1,
+  {id:4,
     item:"Service",
     link:"/"
   },
-  {id:1,
+  {id:5,
     item:"Listing",
     link:"/"
   },
-  {id:1,
+  {id:6,
     item:"Contact us",
     link:"/"
   }

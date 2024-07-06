@@ -11,7 +11,7 @@ type ProdDetails = {
 }
 
 
-export default function page({ params }: { params: ProdDetails }) {
+export default function Page({ params }: { params: ProdDetails }) {
   const { increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
   const product: any = products.find((item) => (item.id) === parseInt(params.productId))
   const similar = products
@@ -77,7 +77,7 @@ export default function page({ params }: { params: ProdDetails }) {
         <div className="py-4">
           <h1 className="font-[700] text-[39.06px] py-4">Similar product</h1>
           <div className="flex flex-col md:flex-row justify-center w-full items-center space-y-4 md:space-x-8 mx-auto">{similar.slice(0, 2).map((item) => (
-            <ProductCard item={product} />
+            <ProductCard item={product} key={item.id} />
           ))}</div>
         </div>
       </div>

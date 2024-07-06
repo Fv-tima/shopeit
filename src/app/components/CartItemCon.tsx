@@ -44,7 +44,11 @@ export default function CartItem({ id, quantity }: CartItemProps) {
       <td className=" p-2"><div className="flex space-x-2 text-md "><button className=" text-sm px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(item.id)}>+</button><span>{cartQuantity}</span><button className="px-2 text-sm bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(item.id)}>-</button>
       </div></td>
       <td className="p-2"> <p className="text-[16px] font-[500]">${item.price * quantity}</p></td>
-      <td>1961</td>
+      <td className="p-2">  <Image
+      src="/trash.svg"
+      width={24}
+      height={24}
+      alt="image" /></td>
     </tr>
     <hr  className="flex"/>
   </tbody>
