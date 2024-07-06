@@ -20,7 +20,7 @@ export default function Page({ params }: { params: ProdDetails }) {
     <div>
       <Banner />
       <div className="p-[40px]">
-        <h1 className="font-500 text-[31.25px]">Product Details</h1>
+        <h1 className="font-[500] text-[31.25px]">Product Details</h1>
         <div className="flex flex-col md:flex-row md:space-x-16 justify-center items-center space-y-6 md:space-y-0 mt-4">
           <Image
             src={product.img}
