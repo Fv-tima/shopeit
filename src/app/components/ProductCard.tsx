@@ -14,14 +14,14 @@ export default function ProductCard({ product }: any) {
   return (
     <div className='flex'>
 
-      <div className='flex flex-col w-[165px] h-[310px]'>
-        <div className="relative" onClick={click}>
+      <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
+        <div className="relative" >
           <Link href={`/products/${product.id}`}>
             <Image src={product.img} alt='' width={164} height={215} className='rounded-md h-[215px]' />
           </Link>
-          <div className='absolute top-2 right-2'>
+          <button className='absolute top-2 right-2' onClick={click}>
             {fav ? <Image src="/heart2.svg" alt='fav' width={24} height={24} /> : <Image src="/Emheart.png" alt='fav' width={24} height={24} />}
-          </div>
+          </button>
         </div>
         <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
         <div className="flex justify-between w-full">
@@ -33,7 +33,9 @@ export default function ProductCard({ product }: any) {
             <Image src="/star.png" alt='star' width={24} height={24} />
             <h2>4.5</h2>
           </div>
-          <Image src="/cart.svg" alt='cart' width={24} height={24} onClick={() => increaseCartQuantity(product.id)} className='pointer' />
+          <button onClick={() => increaseCartQuantity(product.id)} >
+          <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
+          </button>
         </div>
       </div>
 

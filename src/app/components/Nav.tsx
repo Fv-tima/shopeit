@@ -23,18 +23,18 @@ export default function Nav() {
             height={38}
             alt="logo" />
         </Link>
-        <div className="flex-row items-center md:flex md:justify-between space-x-[30px] hidden">
+        <div className="flex-row items-center  md:flex md:justify-between space-x-[30px] hidden">
           {navItems.map((item) => (
             <ul key={item.id}>
               <Link href={item.link}><li className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full hover:rounded-md" >{item.item}</li></Link>
             </ul>
           ))}
         </div>
-        <div className="md:flex items-center  space-x-[30px] hidden">
+        <div className=":flex items-center  space-x-[30px] hidden">
         <button className="hover:text-black text-[16px] font-medium text-white hover:bg-transparent bg-[#251F73] p-2 w-full rounded-md hover:border">Login</button>
           <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Register</button>
         </div>
-        <div className="md:flex items-center space-x-[30px] hidden">
+        <div className="flex items-center  space-x-[30px] ">
         <Image
             src="/search.svg"
             width={24}
@@ -54,7 +54,7 @@ export default function Nav() {
             height={24}
             alt="heart" />
         </div>
-        <div className="md:hidden" onClick={open}>
+        <button className="md:hidden" onClick={open}>
           {openNav ? <Image
             src="/menu.svg"
             width={24}
@@ -65,20 +65,20 @@ export default function Nav() {
               width={24}
               height={24}
               alt="open" />}
-        </div>
+        </button>
       </div>
       {openNav && (
         <div className="md:hidden mt-4 h-screen justify-start flex flex-col" >
-          <div className="flex flex-col space-y-[48px]" onClick={open}>
+          <div className="flex flex-col space-y-[16px] mt-6" onClick={open}>
             {navItems.map((item) => (
-              <ul key={item.id} className="border-b-yellowy">
+              <ul key={item.id} >
                 <Link  href={item.link}><li className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full hover:rounded-md">{item.item}</li></Link>
               </ul>
             ))}
           </div>
           <div className="flex mt-8 justify-start items-center space-x-[30px] md:hidden">
-        <button className="hover:text-black text-[16px] font-medium text-white hover:bg-transparent bg-[#251F73] p-2 w-full rounded-md hover:border">Login</button>
-          <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Register</button>
+        <button className="hover:text-black text-[16px] font-medium text-white hover:bg-transparent bg-[#251F73] p-2 w-full rounded-lg hover:border">Login</button>
+          <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-lg border">Register</button>
         </div>
         </div>
       )}
@@ -104,10 +104,6 @@ export const navItems = [
     link:"/"
   },
   {id:5,
-    item:"Listing",
-    link:"/"
-  },
-  {id:6,
     item:"Contact us",
     link:"/"
   }

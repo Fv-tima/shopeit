@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+  overflow-x: hidden;
+}
+
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
   url('/banner.png') no-repeat center center;

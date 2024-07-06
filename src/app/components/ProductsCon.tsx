@@ -2,6 +2,7 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 import { products } from '@/product'
+import Image from 'next/image'
 
 export default function ProductsCon() {
   return (
@@ -21,6 +22,11 @@ export default function ProductsCon() {
           ))
         }
       </div>
+      <Image
+      src="/prodnav.png"
+      width={476}
+      height={105}
+      alt="image" className='flex cursor-pointer my-6  justify-center items-center mx-auto md:w-[476px] md:h-[105px]  w-[289px] h-[56px]'/>
     </div>
   )
 }
