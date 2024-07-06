@@ -1,11 +1,11 @@
 "use client"
+import React from "react"
 import Banner from "@/app/components/Banner"
 import ProductCard from "@/app/components/ProductCard"
 import Description from "@/app/components/Description"
 import { products } from "@/product"
 import { useShoppingCart } from "@/app/context/ShoppingCartContext"
 import Image from "next/image"
-import Link from "next/link"
 type ProdDetails = {
   productId: string,
 }

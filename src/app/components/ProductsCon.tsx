@@ -17,7 +17,7 @@ export default function ProductsCon() {
       <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-12 py-12">
         {
           products.map((product) => (
-            <ProductCard product={product} />
+            <ProductCard product={product} key={product.id} />
           ))
         }
       </div>
