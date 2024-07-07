@@ -30,7 +30,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
           <h1 className="text-[16px] font-[500] ">{item.title}</h1></div>
         <div className="text-[16px] font-[500] w-[55px] md:w-[86px] pl-2">Blue</div>
         <div className="text-[16px] font-[500]  w-[50px] md:w-[86px] pl-2">XL</div>
-        <div className=" w-[86px] pl-2"><div className="flex space-x-2 text-md "><button className=" text-sm px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(item.id)}>+</button><span>{quantity}</span><button className="px-2 text-sm bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(item.id)}>-</button>
+        <div className=" w-[86px] pl-2"><div className="flex space-x-2 text-md "><button className=" text-sm px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(item.id)}>-</button><span>{quantity}</span><button className="px-2 text-sm bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(item.id)}>+</button>
         </div></div>
         <div className="p-2 pl-6"> <p className="text-[16px] w-[50px] md:w-[86px] font-[500]">${item.price * quantity}</p></div>
         <div className="p-2"> <button onClick={() => removeFromCart(item.id)}> <Image
@@ -64,7 +64,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
             width={24}
             height={24}
             alt="image" /></button></div>
-        <div className="flex space-x-2 text-md "><button className=" text-sm px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(item.id)}>+</button><span>{quantity}</span><button className="px-2 text-sm bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(item.id)}>-</button>
+        <div className="flex space-x-2 text-md "><button className=" text-sm px-2 bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(item.id)}>-</button><span>{quantity}</span><button className="px-2 text-sm bg-black text-white rounded-md" onClick={() => increaseCartQuantity(item.id)}>+</button>
         </div>
         </div>
       </div>

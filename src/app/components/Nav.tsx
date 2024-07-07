@@ -1,16 +1,19 @@
 "use client"
+
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 
 
-export default function Nav({path}:any) {
+export default function Nav() {
   const { cartQuantity } = useShoppingCart()
   const [openNav, setOpenNav] = useState(false);
-
   
+  const  pathname = usePathname();
+
 
   const open = () => {
     setOpenNav((prev) => !prev);
@@ -28,7 +31,7 @@ export default function Nav({path}:any) {
         <div className="flex-row items-center  md:flex md:justify-between space-x-[30px] hidden">
           {navItems.map((item) => (
             <ul key={item.id}>
-              <Link href={item.link}><li className={`text-black text-[16px] font-medium hover:text-white  p-2 w-full hover:rounded-md hover:bg-[#251f73] ${location.pathname === item.link ? 'bg-[#251F73] rounded-md text-white ' :""} `}>{item.item}
+              <Link href={item.link}><li className={`text-black text-[16px] font-medium hover:text-white  p-2 w-full hover:rounded-md hover:bg-[#251f73] ${pathname === item.link ? 'bg-[#251F73] rounded-md text-white ' :""} `}>{item.item}
               </li></Link>
             </ul>
           ))}
