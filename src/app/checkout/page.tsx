@@ -82,61 +82,95 @@ export default function Page() {
         <h1 className="font-[700] text-[60px]">Checkout</h1>
       </div>
       <div className='p-10 relative'>
-        <h1 className="font-500 text-[31.25px] p-4">Product Details</h1>
-        <form action="" onSubmit={handleSubmit} className="flex md:flex-row flex-col justify-evenly">
-          <div className="flex flex-col my-6 gap-y-6">
-            <div className='grid gap-6'>
-              <div className='flex gap-6 flex-col md:flex-row'>
-                <div className="flex flex-col ">
+        <h1 className="font-[500] text-[31.25px] p-4">Product Details</h1>
+        <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly items-center lg:items-start">
+          <div className="flex flex-col my-6 gap-y-6 w-1/2">
+            <div className='grid gap-6 w-full'>
+              <div className='flex gap-6 w-full flex-col md:flex-row'>
+                <div className="flex flex-col relative">
                   <label htmlFor="firstName">First Name</label>
-                  <input type="text" name="" id="firstName" required placeholder="Enter your First Name" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.firstName}
+                  <input type="text" name="" id="firstName" required placeholder="Enter your First Name" className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73] ' onChange={(e) => handle(e)} value={regData.firstName}
                   />
-
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
                   <label htmlFor="lastName">Last Name</label>
-                  <input type="text" name="" id="lastName" required placeholder="Enter your Last Name" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.lastName} />
+                  <input type="text" name="" id="lastName" required placeholder="Enter your Last Name" className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.lastName} />
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
               </div>
               <div className="flex gap-6 flex-col md:flex-row">
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
                   <label htmlFor="phone">Phone Number</label>
-                  <input type="number" name="" id="phone" required placeholder="Enter your Phone Number " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.phone} />
+                  <input type="number" name="" id="phone" required placeholder="Enter your Phone Number " className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.phone} />
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
                   <label htmlFor="email">Email Address</label>
-                  <input type="email" name="" id="email" required placeholder="Enter your Email Address" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.email} />
+                  <input type="email" name="" id="email" required placeholder="Enter your Email Address" className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.email} />
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
               </div>
-              <div className='flex flex-col'>
+              <div className='flex flex-col relative'>
                 <label htmlFor="address">Address</label>
                 <input type="text" name="" id="address" required placeholder="Enter your Address " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.address} />
+                <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
               </div>
               <div className="flex gap-6 flex-col md:flex-row">
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
                   <label htmlFor="country">Country</label>
-                  <input type="text" name="" id="country" required placeholder="Enter your Country" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.country} />
+                  <input type="text" name="" id="country" required placeholder="Enter your Country" className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.country} />
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
                   <label htmlFor="city">City</label>
-                  <input type="text" name="" id="city" required placeholder="Enter your City " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.city} />
+                  <input type="text" name="" id="city" required placeholder="Enter your City " className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.city} />
+                  <Image
+                    src="/ast.svg"
+                    width={8}
+                    height={8}
+                    alt="card" className='absolute top-2 right-2' />
                 </div>
               </div>
             </div>
             <h1 className="font-[500] text-[31.25px] mt-4">Payment Method</h1>
             <p className="font-[500] text-[12.8px] my-2">Select a Payment Method</p>
-            <div className="flex flex-col gap-y-4 justify-center">
+            <div className="flex flex-col gap-y-6 justify-center">
               {method.map((item) => (
-                <div className="flex justify-between" key={item.id}>
-                  <div className="flex space-x-1">
+                <div className="flex justify-between lg:w-[350px] w-full md:w-350px" key={item.id}>
+                  <div className="flex space-x-2  ">
                     <Image
                       src={item.image}
                       width={24}
                       height={24}
                       alt="card" />
-                    <h1 className='font-[400] text-[16px] text-[#251f73]'>{item.title}</h1>
+                    <h1 className='font-[400] text-[16px] hover:text-[#251f73]'>{item.title}</h1>
                   </div>
-                  <input type="checkbox" name="" id="" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6'/>
+                  <input type="checkbox" name="" id="" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
                 </div>
               ))}
             </div>
@@ -144,42 +178,42 @@ export default function Page() {
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="card">Card Number</label>
-                  <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='w-full pl-6 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
+                  <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='lg:w-[350px] w-full md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
                   <Image
                     src="/card.png"
                     width={24}
                     height={24}
-                    alt="card" className='absolute top-10' />
+                    alt="card" className='absolute top-10 left-2' />
                 </div>
                 <div className="flex flex-col relative">
                   <label htmlFor="cvv">CVV</label>
-                  <input type="number" name="" id="cvv" required placeholder="Enter Card CVV" className='w-full p-4 pl-6 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.cvv} />
+                  <input type="number" name="" id="cvv" required placeholder="Enter Card CVV" className='lg:w-[350px] w-full md:w-350px p-4 pl-10 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.cvv} />
                   <Image
                     src="/lock.png"
                     width={24}
                     height={24}
-                    alt="card" className='absolute top-10' />
+                    alt="card" className='absolute top-10 left-2' />
                 </div>
               </div>
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="exp">Expire Name</label>
-                  <input type="text" name="" id="exp" required placeholder="MM / YY " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.exp} />
+                  <input type="text" name="" id="exp" required placeholder="MM / YY " className='lg:w-[350px] w-full md:w-350px p-4 pl-10 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.exp} />
                   <Image
                     src="/calendar.png"
                     width={24}
                     height={24}
-                    alt="card" className='absolute top-10' />
+                    alt="card" className='absolute top-10 left-2' />
                 </div>
                 <div className="flex flex-col relative">
                   <label htmlFor="holder">Card Holder Name</label>
-                  <input type="text" name="" id="holder" required placeholder="Enter Card Name " className='w-full p-4 pl-6 
+                  <input type="text" name="" id="holder" required placeholder="Enter Card Name " className='lg:w-[350px] w-full md:w-350px p-4 pl-10 
                 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.holder} />
                   <Image
                     src="/user.png"
                     width={24}
                     height={24}
-                    alt="card" className='absolute top-10' />
+                    alt="card" className='absolute top-10 left-2' />
                 </div>
               </div>
             </div>

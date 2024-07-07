@@ -20,7 +20,8 @@ export default function Page({ params }: { params: ProdDetails }) {
   }
   const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
   const product: any = products.find((item) => (item.id) === parseInt(params.productId))
-  const similar = products.filter((item) => ((item.category) === (product.category)) && (item.id) !== (product.id))
+  const similar = products.slice(0, 6);
+  const alsolike = products.slice(-6);
   return (
     <div>
       <Banner />
@@ -32,8 +33,8 @@ export default function Page({ params }: { params: ProdDetails }) {
             alt='images'
             width={530}
             height={649}
-            className='rounded-md w-[342px] h-[369px] md:w-[530px] md:h-[649px] bg-[#EBF3FE]' />
-          <div className="flex flex-col space-y-8">
+            className='rounded-md w-[342px] h-[369px] md:w-[400px] md:h-[500px] lg:w-[530px] lg:h-[649px] bg-[#EBF3FE]' />
+          <div className="flex flex-col gap-y-4 lg:gap-y-8">
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[20px]">{product.title}</h1>
               <h1 className="font-[700] text-[16px] text-[#251f73]">${product.price}</h1>
@@ -42,7 +43,7 @@ export default function Page({ params }: { params: ProdDetails }) {
             <p className="font-[400] text-[12.8px]">{product.description}</p>
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[25px]">Colors</h1>
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+              <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
                 <button className="text-white text-[16px] font-medium p-2 rounded-md bg-[#251f73] flex items-center space-x-2"> <Image src="/tick-.svg" alt='fav' width={24} height={24} /> <span>Blue</span></button>
                 <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Yellow</button>
                 <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Black</button>
@@ -78,7 +79,7 @@ export default function Page({ params }: { params: ProdDetails }) {
       </div>
       <Description />
       <h1 className="font-500 text-[31.25px] p-6"> Review For Verified</h1>
-      <div className="flex flex-col md:flex-row justify-evenly items-start p-4 space-y-6 md:space-y-0">
+      <div className="flex flex-col lg:flex-row justify-evenly items-start p-4 gap-y-6 md:gap-y-0">
         <Image src="/Review.png" alt='review' width={606} height={293} />
         <Image src="/customer.png" alt='review' width={637} height={465} />
       </div>
@@ -90,7 +91,7 @@ export default function Page({ params }: { params: ProdDetails }) {
               <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
                 <div>
                   <Link href={`/products/${product.id}`}>
-                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-200' />
                   </Link>
                 </div>
                 <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
@@ -114,12 +115,12 @@ export default function Page({ params }: { params: ProdDetails }) {
         </div>
         <div className="py-4">
           <h1 className="font-[700] text-[39.06px] p-4">Most View by Customer</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center  gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[20px]">{similar.map((item) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center  gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[20px]">{alsolike.map((item) => (
             <div className='flex' key={item.id}>
               <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
                 <div>
                   <Link href={`/products/${product.id}`}>
-                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-200' />
                   </Link>
                 </div>
                 <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
