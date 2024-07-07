@@ -6,7 +6,7 @@ export default function Thanks({setOpenModal}:any) {
 setOpenModal(false)
   }
   return (
-    <div  onClick={back} className=' flex flex-col justify-between h-[500px] w-[400px] shadow-md fixed rounded-lg p-14 text-[#251F73]  bottom-12 items-center bg-white'> 
+    <div  onClick={back} className=' flex flex-col justify-between h-[500px] w-[300px] md:w-[400px] shadow-md fixed rounded-lg p-14 text-[#251F73] top-12  items-center bg-white'> 
     <Image
     src="/vec2.png"
     alt='check'

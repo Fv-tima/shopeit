@@ -93,37 +93,37 @@ export default function Page() {
             <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col ">
                 <label htmlFor="firstName">First Name</label>
-                <input type="text" name="" id="firstName" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.firstName}
+                <input type="text" name="" id="firstName" required placeholder="Enter yourFirst Name" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.firstName}
                  />
                 
               </div>
               <div className='flex flex-col'>
                 <label htmlFor="lastName">Last Name</label>
-                <input type="text" name="" id="lastName" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.lastName}/>
+                <input type="text" name="" id="lastName" required placeholder="Enter your Last Name" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.lastName}/>
               </div>
             </div>
             <div className="flex gap-6 flex-col md:flex-row">
               <div className='flex flex-col'>
                 <label htmlFor="phone">Phone Number</label>
-                <input type="number" name="" id="phone" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.phone}/>
+                <input type="number" name="" id="phone" required placeholder="Enter your Phone Number " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.phone}/>
               </div>
               <div className='flex flex-col'>
                 <label htmlFor="email">Email Address</label>
-                <input type="email" name="" id="email" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.email}/>
+                <input type="email" name="" id="email" required placeholder="Enter your Email Address" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.email}/>
               </div>
             </div>
             <div className='flex flex-col'>
               <label htmlFor="address">Address</label>
-              <input type="text" name="" id="address" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.address}/>
+              <input type="text" name="" id="address" required placeholder="Enter your Address " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.address}/>
             </div>
             <div className="flex gap-6 flex-col md:flex-row">
               <div className='flex flex-col'>
                 <label htmlFor="country">Country</label>
-                <input type="text" name="" id="country" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.country}/>
+                <input type="text" name="" id="country" required placeholder="Enter your Country" className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.country}/>
               </div>
               <div className='flex flex-col'>
                 <label htmlFor="city">City</label>
-                <input type="text" name="" id="city" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.city}/>
+                <input type="text" name="" id="city" required placeholder="Enter your City " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.city}/>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function Page() {
             <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col relative">
                 <label htmlFor="card">Card Number</label>
-                <input type="number" name="" id="card" required placeholder="Card Number " className='w-full pl-6 p-4 bg-transparent border rounded-lg border-gray-400'onChange={(e) => handle(e)} value={regData.card}/>
+                <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='w-full pl-6 p-4 bg-transparent border rounded-lg border-[#251f73]'onChange={(e) => handle(e)} value={regData.card}/>
                 <Image
                   src="/card.png"
                   width={24}
@@ -159,7 +159,7 @@ export default function Page() {
               </div>
               <div className="flex flex-col relative">
                 <label htmlFor="cvv">CVV</label>
-                <input type="number" name="" id="cvv" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.cvv}/>
+                <input type="number" name="" id="cvv" required placeholder="Enter Card CVV" className='w-full p-4 pl-6 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.cvv}/>
                 <Image
                   src="/lock.png"
                   width={24}
@@ -170,7 +170,7 @@ export default function Page() {
             <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col relative">
                 <label htmlFor="exp">Expire Name</label>
-                <input type="text" name="" id="exp" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.exp}/>
+                <input type="text" name="" id="exp" required placeholder="MM / YY " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.exp}/>
                 <Image
                   src="/calendar.png"
                   width={24}
@@ -179,8 +179,8 @@ export default function Page() {
               </div>
               <div className="flex flex-col relative">
                 <label htmlFor="holder">Card Holder Name</label>
-                <input type="text" name="" id="holder" required placeholder="Card Number " className='w-full p-4 pl-6 
-                bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.holder}/>
+                <input type="text" name="" id="holder" required placeholder="Enter Card Name " className='w-full p-4 pl-6 
+                bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.holder}/>
                 <Image
                   src="/user.png"
                   width={24}

@@ -15,7 +15,7 @@ export default function ProductsCon() {
         <div className="flex space-x-6">  <button className="text-[16px] font-medium text-white bg-[#251F73] p-2 w-[200px] rounded-md ">Availabe Product</button>
           <button className="text-black text-[16px] font-medium p-2 rounded-md border">Filter</button></div>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-12 py-12">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center gap-x-5 md:gap-x-8 gap-y-12 py-12">
         {
           products.map((product) => (
             <ProductCard product={product} key={product.id} />
