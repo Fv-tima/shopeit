@@ -58,10 +58,10 @@ export default function Page({ params }: { params: ProdDetails }) {
                 <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">L</button>
               </div>
             </div>
-            <div className="flex space-x-2 text-md"><button className="px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(product.id)}>+</button><span>{getItemQuantity(product.id)}</span><button className="px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(product.id)}>-</button>
+            <div className="flex space-x-2 text-md"><button className="px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(product.id)}>+</button><span>{getItemQuantity(product.id)}</span><button className="px-2 bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(product.id)}>-</button>
             </div>
             <div className="flex space-x-2 items-center">
-              <button onClick={() => decreaseCartQuantity(product.id)} className=" text-[16px] font-medium text-white bg-[#251F73] p-2 rounded-md flex items-center space-x-2"><Image src="/car1.svg" alt='fav' width={24} height={24} /> <span>Add cart</span></button>
+              <button onClick={() => increaseCartQuantity(product.id)} className=" text-[16px] font-medium text-white bg-[#251F73] p-2 rounded-md flex items-center space-x-2"><Image src="/car1.svg" alt='fav' width={24} height={24} /> <span>Add cart</span></button>
               <button className="text-black text-[16px] font-medium p-2 rounded-md border border-[#251f73] flex items-center space-x-2"> <Image src="/heart2.svg" alt='fav' width={24} height={24} /> <span>Likes</span></button>
             </div>
           </div>
