@@ -7,7 +7,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { products } from '@/product'
 import Thanks from '../components/Thanks'
 
-export default function page() {
+export default function Page() {
   const [openModal, setOpenModal] = useState(false)
 
   const open = () => {
@@ -74,7 +74,7 @@ export default function page() {
           <p className="font-[500] text-[12.8px] my-2">Select a Payment Method</p>
           <div className="flex flex-col gap-y-4 justify-center">
             {method.map((item) => (
-              <div className="flex justify-between">
+              <div className="flex justify-between" key={item.id}>
                 <div className="flex space-x-1">
                   <Image
                     src={item.image}
