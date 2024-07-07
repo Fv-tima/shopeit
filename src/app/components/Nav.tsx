@@ -78,7 +78,8 @@ export default function Nav() {
           <div className="flex flex-col space-y-[16px] mt-6" onClick={open}>
             {navItems.map((item) => (
               <ul key={item.id} >
-                <Link  href={item.link}><li className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full hover:rounded-md">{item.item}</li></Link>
+                 <Link href={item.link}><li className={`text-black text-[16px] font-medium hover:text-white  p-2 w-full hover:rounded-md hover:bg-[#251f73] ${pathname === item.link ? 'bg-[#251F73] rounded-md text-white ' :""} `}>{item.item}
+                 </li></Link>
               </ul>
             ))}
           </div>
