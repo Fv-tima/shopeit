@@ -83,13 +83,13 @@ export default function Page() {
       </div>
       <div className='p-10 relative'>
         <h1 className="font-[500] text-[31.25px] p-4">Product Details</h1>
-        <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly items-center lg:items-start">
+        <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly  items-start">
           <div className="flex flex-col my-6 gap-y-6 w-1/2">
             <div className='grid gap-6 w-full'>
               <div className='flex gap-6 w-full flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="firstName">First Name</label>
-                  <input type="text" name="" id="firstName" required placeholder="Enter your First Name" className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73] ' onChange={(e) => handle(e)} value={regData.firstName}
+                  <input type="text" name="" id="firstName" required placeholder="Enter your First Name" className='lg:w-[350px] w-350px p-4 bg-transparent border rounded-lg border-[#251f73] ' onChange={(e) => handle(e)} value={regData.firstName}
                   />
                   <Image
                     src="/ast.svg"
@@ -161,7 +161,7 @@ export default function Page() {
             <p className="font-[500] text-[12.8px] my-2">Select a Payment Method</p>
             <div className="flex flex-col gap-y-6 justify-center">
               {method.map((item) => (
-                <div className="flex justify-between lg:w-[350px] w-full md:w-350px" key={item.id}>
+                <div className="flex justify-between w-[300px]" key={item.id}>
                   <div className="flex space-x-2  ">
                     <Image
                       src={item.image}
@@ -178,7 +178,7 @@ export default function Page() {
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="card">Card Number</label>
-                  <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='lg:w-[350px] w-full md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
+                  <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='lg:w-[350px]  md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
                   <Image
                     src="/card.png"
                     width={24}
