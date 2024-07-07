@@ -1,88 +1,99 @@
 export const products = [
   {
       "id": 1,
-      "title": "Classic White T-Shirt",
-      "description": "A timeless white t-shirt made from 100% organic cotton.",
+      "title": "Blue glitter gown",
+      "description": "A timeless glitter gown made from 100% organic silk.",
       "price": 10.00,
-      "img": "/1.png"
+      "img": "/1.png",
+      category:"dinner"
   },
   {
       "id": 2,
-      "title": "Blue Denim Jeans",
-      "description": "Comfortable blue denim jeans with a slim fit.",
+      "title": "Peplum gown",
+      "description": "Comfortable blue peplum gown with a slim fit.",
       "price": 40.00,
-      "img": "/2.png"
+      "img": "/2.png",
+      category:"dinner"
   },
   {
       "id": 3,
-      "title": "Black Leather Jacket",
-      "description": "Stylish black leather jacket, perfect for any occasion.",
+      "title": "Black dinner dress",
+      "description": "Stylish black dinner dress, perfect for any occasion.",
       "price": 120.00,
-      "img": "/3.png"
+      "img": "/6.png"
   },
   {
       "id": 4,
-      "title": "Red Summer Dress",
-      "description": "Light and breezy red summer dress, ideal for warm days.",
+      "title": "Black party dress",
+      "description": "Light and breezy black party dress, ideal for party days.",
       "price": 30.00,
-      "img": "/4.png"
+      "img": "/4.png",
+      category:"dinner"
   },
   {
       "id": 5,
-      "title": "Grey Hoodie",
-      "description": "Cozy grey hoodie made from a soft cotton blend.",
+      "title": "Flayed summer dress",
+      "description": "Cozy summer dress made from a soft chiffon blend.",
       "price": 34.00,
-      "img": "/5.png"
+      "img": "/5.png",
+      category:"casual"
   },
   {
       "id": 6,
-      "title": "Black Skinny Jeans",
-      "description": "Fashionable black skinny jeans with a modern fit.",
+      "title": "Black straight dress",
+      "description": "Fashionable black straight dres with a modern fit.",
       "price": 45.00,
-      "img": "/1.png"
+      "img": "/6.png",
+      category:"dinner"
   },
-  // {
-  //     "id": 7,
-  //     "title": "White Sneakers",
-  //     "description": "Classic white sneakers for a clean and casual look.",
-  //     "price": 50.00,
-  //     "img": "https://example.com/images/white_sneakers.jpg"
-  // },
-  // {
-  //     "id": 8,
-  //     "title": "Blue Flannel Shirt",
-  //     "description": "Comfortable blue flannel shirt, perfect for layering.",
-  //     "price": 20.00,
-  //     "img": "https://example.com/images/blue_flannel_shirt.jpg"
-  // },
-  // {
-  //     "id": 0,
-  //     "title": "Green Cargo Pants",
-  //     "description": "Durable green cargo pants with multiple pockets.",
-  //     "price": 30.00,
-  //     "img": "https://example.com/images/green_cargo_pants.jpg"
-  // },
-  // {
-  //     "id": 10,
-  //     "title": "Yellow Sundress",
-  //     "description": "Bright yellow sundress, great for sunny days.",
-  //     "price": 35.00,
-  //     "img": "https://example.com/images/yellow_sundress.jpg"
-  // },
-  // {
-  //     "id": 11,
-  //     "title": "Black Beanie",
-  //     "description": "Warm black beanie made from soft wool.",
-  //     "price": 14.00,
-  //     "img": "https://example.com/images/black_beanie.jpg"
-  // },
-  // {
-  //     "id": 12,
-  //     "title": "White Dress Shirt",
-  //     "description": "Elegant white dress shirt, perfect for formal occasions.",
-  //     "price": 24.00,
-  //     "img": "https://example.com/images/white_dress_shirt.jpg"
-  // },
+  {
+      "id": 7,
+      "title": "Bluey sleeved dress",
+      "description": "Classic sleeved dress for a clean and party look.",
+      "price": 50.00,
+      "img": "/7.png",
+      category:"dinner"
+  },
+  {
+      "id": 8,
+      "title": "Blue Flannel dress",
+      "description": "Comfortable blue flannel dress, perfect for summer.",
+      "price": 20.00,
+      "img": "/8.png",
+      category:"casual"
+  },
+  {
+      "id": 9,
+      "title": "black short dress",
+      "description": "Durable black short dress with multiple folds.",
+      "price": 30.00,
+      "img": "/9.png",
+      category:"dinner"
+  },
+  {
+      "id": 10,
+      "title": "Blue sleeveless dress",
+      "description": "Bright blue dress, great for sunny days.",
+      "price": 35.00,
+      "img": "/10.png",
+      category:"casual"
+  },
+  {
+      "id": 11,
+      "title": "Black flayed",
+      "description": "Warm black flayed made from soft wool.",
+      "price": 14.00,
+      "img": "/11.png",
+      category:"casual"
+  },
+  {
+      "id": 12,
+      "title": "Armani dress",
+      "description": "Elegant dress, perfect for formal/dinner occasions.",
+      "price": 24.00,
+      "img": "/12.png",
+      category:"dinner"
+  },
   // {
   //     "id": 13,
   //     "title": "Blue Polo Shirt",

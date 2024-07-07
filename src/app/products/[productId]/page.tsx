@@ -1,7 +1,8 @@
 "use client"
 import React from "react"
+import { useState } from "react"
 import Banner from "@/app/components/Banner"
-import ProductCard from "@/app/components/ProductCard"
+import Link from "next/link"
 import Description from "@/app/components/Description"
 import { products } from "@/product"
 import { useShoppingCart } from "@/app/context/ShoppingCartContext"
@@ -12,10 +13,14 @@ type ProdDetails = {
 
 
 export default function Page({ params }: { params: ProdDetails }) {
+  const [fav, setFav] = useState(false)
+
+  const click = () => {
+    setFav(!fav)
+  }
   const {  getItemQuantity, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
   const product: any = products.find((item) => (item.id) === parseInt(params.productId))
-  const similar = products
-    .filter((item) => ((item.title) === (product.title)) && (item.id) !== (product.id))
+  const similar = products.filter((item) => ((item.category) === (product.category)) && (item.id) !== (product.id))
   return (
     <div>
       <Banner />
@@ -27,7 +32,7 @@ export default function Page({ params }: { params: ProdDetails }) {
             alt='images'
             width={530}
             height={649}
-            className='rounded-md w-[342px] h-[369px] md:w-[530px] md:h-[649px]' />
+            className='rounded-md w-[342px] h-[369px] md:w-[530px] md:h-[649px] bg-[#EBF3FE]' />
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[20px]">{product.title}</h1>
@@ -76,8 +81,66 @@ export default function Page({ params }: { params: ProdDetails }) {
       <div>
         <div className="py-4">
           <h1 className="font-[700] text-[39.06px] p-4">Similar product</h1>
-          <div className="flex flex-col md:flex-row justify-center w-full items-center space-y-4 md:space-x-8 mx-auto">{similar.slice(0, 2).map((item) => (
-            <ProductCard item={product} key={item.id} />
+          <div className="flex flex-col md:flex-row p-6 w-full items-center justify-center space-y-4 md:space-x-8 mx-auto">{similar.map((item) => (
+             <div className='flex' key={item.id}>
+             <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
+               <div className="relative" >
+                 <Link href={`/products/${product.id}`}>
+                   <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                 </Link>
+                 <button className='absolute top-2 right-2' onClick={click}>
+                   {fav ? <Image src="/heart2.svg" alt='fav' width={24} height={24} /> : <Image src="/Emheart.png" alt='fav' width={24} height={24} />}
+                 </button>
+               </div>
+               <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
+               <div className="flex justify-between w-full">
+                 <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
+                 <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
+               </div>
+               <div className="flex justify-between w-full">
+                 <div className="flex space-x-1">
+                   <Image src="/star.png" alt='star' width={24} height={24} />
+                   <h2>4.5</h2>
+                 </div>
+                 <button onClick={() => increaseCartQuantity(product.id)} >
+                 <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
+                 </button>
+               </div>
+             </div>
+       
+           </div>
+          ))}</div>
+        </div>
+        <div className="py-4">
+          <h1 className="font-[700] text-[39.06px] p-4">Most View by Customer</h1>
+          <div className="flex flex-col md:flex-row p-6 w-full items-center justify-center space-y-4 md:space-x-8 mx-auto">{similar.map((item) => (
+             <div className='flex' key={item.id}>
+             <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
+               <div className="relative" >
+                 <Link href={`/products/${product.id}`}>
+                   <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                 </Link>
+                 <button className='absolute top-2 right-2' onClick={click}>
+                   {fav ? <Image src="/heart2.svg" alt='fav' width={24} height={24} /> : <Image src="/Emheart.png" alt='fav' width={24} height={24} />}
+                 </button>
+               </div>
+               <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
+               <div className="flex justify-between w-full">
+                 <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
+                 <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
+               </div>
+               <div className="flex justify-between w-full">
+                 <div className="flex space-x-1">
+                   <Image src="/star.png" alt='star' width={24} height={24} />
+                   <h2>4.5</h2>
+                 </div>
+                 <button onClick={() => increaseCartQuantity(product.id)} >
+                 <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
+                 </button>
+               </div>
+             </div>
+       
+           </div>
           ))}</div>
         </div>
       </div>

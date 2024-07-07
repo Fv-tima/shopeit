@@ -7,15 +7,69 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { products } from '@/product'
 import Thanks from '../components/Thanks'
 
-export default function Page() {
-  const [openModal, setOpenModal] = useState(false)
+type KeyCheck = {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  address: string;
+  country: string;
+  city: string;
+  card: string;
+  cvv: string;
+  exp: string;
+  holder: string;
+};
 
-  const open = () => {
-    setOpenModal((prev) => !prev);
+type Check = {
+  [K in keyof KeyCheck]: string;
+};
+
+
+export default function Page() {
+  const [regData, setRegData] = useState<Check>({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    address: "",
+    country: "",
+    city: "",
+    card:"",
+    cvv:"",
+    exp:"",
+    holder:"",
+  });
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Form Data:', regData);
+    setOpenModal(true)
+    setRegData({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      address: "",
+      country: "",
+      city: "",
+      card:"",
+      cvv:"",
+      exp:"",
+      holder:""
+    })
   }
 
-  const [tick, setTick] = useState(false)
+  function handle(e: React.ChangeEvent<HTMLInputElement>) {
+    const newData: Check = { ...regData }; 
+    newData[e.target.id as keyof Check] = e.target.value 
+    setRegData(newData);
+    console.log(newData);
+  }
 
+  const [openModal, setOpenModal] = useState(false)
+
+ const [tick, setTick] = useState(false)
   const click = () => {
     setTick((prev) => !prev);
   }
@@ -27,46 +81,49 @@ export default function Page() {
     return total + (price * cartItem.quantity);
   }, 0)
   return (
-    <div className='p-10 relative'>
-      <div className=" text-white p-[40px] text-center bg-[#251f73]">
+    <div>
+       <div className=" text-white p-[40px] text-center bg-[#251f73]">
         <h1 className="font-[700] text-[60px]">Checkout</h1>
       </div>
+    <div className='p-10 relative'>
       <h1 className="font-500 text-[31.25px] p-4">Product Details</h1>
-      <form action="" className="flex md:flex-row flex-col justify-evenly">
+      <form action="" onSubmit={handleSubmit} className="flex md:flex-row flex-col justify-evenly">
         <div className="flex flex-col my-6 gap-y-6">
           <div className='grid gap-6'>
-            <div className='flex gap-6 flex-col md:flex-ow'>
+            <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col ">
-                <label htmlFor="first">First Name</label>
-                <input type="text" name="" id="first" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <label htmlFor="firstName">First Name</label>
+                <input type="text" name="" id="firstName" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.firstName}
+                 />
+                
               </div>
               <div className='flex flex-col'>
-                <label htmlFor="last">Last Name</label>
-                <input type="text" name="" id="last" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <label htmlFor="lastName">Last Name</label>
+                <input type="text" name="" id="lastName" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.lastName}/>
               </div>
             </div>
-            <div className="flex gap-6 flex-col md:flex-ow">
+            <div className="flex gap-6 flex-col md:flex-row">
               <div className='flex flex-col'>
-                <label htmlFor="number">Phone Number</label>
-                <input type="text" name="" id="number" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <label htmlFor="phone">Phone Number</label>
+                <input type="number" name="" id="phone" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.phone}/>
               </div>
               <div className='flex flex-col'>
                 <label htmlFor="email">Email Address</label>
-                <input type="text" name="" id="email" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <input type="email" name="" id="email" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.email}/>
               </div>
             </div>
             <div className='flex flex-col'>
               <label htmlFor="address">Address</label>
-              <input type="text" name="" id="address" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+              <input type="text" name="" id="address" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.address}/>
             </div>
-            <div className="flex gap-6 flex-col md:flex-ow">
+            <div className="flex gap-6 flex-col md:flex-row">
               <div className='flex flex-col'>
                 <label htmlFor="country">Country</label>
-                <input type="text" name="" id="country" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <input type="text" name="" id="country" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.country}/>
               </div>
               <div className='flex flex-col'>
                 <label htmlFor="city">City</label>
-                <input type="text" name="" id="city" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' />
+                <input type="text" name="" id="city" required placeholder="Card Number " className='w-full p-4 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.city}/>
               </div>
             </div>
           </div>
@@ -90,10 +147,10 @@ export default function Page() {
             ))}
           </div>
           <div className='grid gap-6 mt-5'>
-            <div className='flex gap-6 flex-col md:flex-ow'>
+            <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col relative">
                 <label htmlFor="card">Card Number</label>
-                <input type="text" name="" id="card" required placeholder="Card Number " className='w-full pl-6 p-4 bg-transparent border rounded-lg border-gray-400' />
+                <input type="number" name="" id="card" required placeholder="Card Number " className='w-full pl-6 p-4 bg-transparent border rounded-lg border-gray-400'onChange={(e) => handle(e)} value={regData.card}/>
                 <Image
                   src="/card.png"
                   width={24}
@@ -102,7 +159,7 @@ export default function Page() {
               </div>
               <div className="flex flex-col relative">
                 <label htmlFor="cvv">CVV</label>
-                <input type="text" name="" id="cvv" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' />
+                <input type="number" name="" id="cvv" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.cvv}/>
                 <Image
                   src="/lock.png"
                   width={24}
@@ -112,8 +169,8 @@ export default function Page() {
             </div>
             <div className='flex gap-6 flex-col md:flex-row'>
               <div className="flex flex-col relative">
-                <label htmlFor="card">Expire Name</label>
-                <input type="text" name="" id="card" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' />
+                <label htmlFor="exp">Expire Name</label>
+                <input type="text" name="" id="exp" required placeholder="Card Number " className='w-full p-4 pl-6 bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.exp}/>
                 <Image
                   src="/calendar.png"
                   width={24}
@@ -121,9 +178,9 @@ export default function Page() {
                   alt="card" className='absolute top-10' />
               </div>
               <div className="flex flex-col relative">
-                <label htmlFor="cvv">Card Holder Name</label>
-                <input type="text" name="" id="cvv" required placeholder="Card Number " className='w-full p-4 pl-6 
-                bg-transparent border rounded-lg border-gray-400' />
+                <label htmlFor="holder">Card Holder Name</label>
+                <input type="text" name="" id="holder" required placeholder="Card Number " className='w-full p-4 pl-6 
+                bg-transparent border rounded-lg border-gray-400' onChange={(e) => handle(e)} value={regData.holder}/>
                 <Image
                   src="/user.png"
                   width={24}
@@ -147,7 +204,7 @@ export default function Page() {
             <h1 className="text-gray-400 font-[400] text-[16px]">Total</h1>
             <h1 className="font-[400] text-[16px]">${total + 455}</h1>
           </div>
-          <button onClick={open} className="hover:text-black text-[16px] font-medium text-white hover:bg-transparent bg-[#251F73] p-2 w-full rounded-md hover:border">Checkout</button>
+          <button  className="hover:text-black text-[16px] font-medium text-white hover:bg-transparent bg-[#251F73] p-2 w-full rounded-md hover:border">Checkout</button>
           <div className="text-black text-[16px] font-medium hover:text-white bg-transparent hover:bg-[#251F73] text-center p-2 w-full rounded-md border cursor-pointer" onClick={clearCart}>Cancel</div>
         </div>
       </form>
@@ -155,6 +212,7 @@ export default function Page() {
         <div className="w-full flex justify-center h-full items-center mx-auto">
           <Thanks setOpenModal={setOpenModal} />
         </div>}
+    </div>
     </div>
   )
 }

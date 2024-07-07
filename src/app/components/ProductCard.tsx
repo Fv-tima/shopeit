@@ -13,11 +13,10 @@ export default function ProductCard({ product }: any) {
   }
   return (
     <div className='flex'>
-
       <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
         <div className="relative" >
           <Link href={`/products/${product.id}`}>
-            <Image src={product.img} alt='' width={164} height={215} className='rounded-md h-[215px]' />
+            <Image src={product.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-500' />
           </Link>
           <button className='absolute top-2 right-2' onClick={click}>
             {fav ? <Image src="/heart2.svg" alt='fav' width={24} height={24} /> : <Image src="/Emheart.png" alt='fav' width={24} height={24} />}

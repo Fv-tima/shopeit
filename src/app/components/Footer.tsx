@@ -8,17 +8,17 @@ export default function Footer() {
   return (
   <div className='bg-[#251F73] p-4 text-white'>
     <div className='p-[40px] flex flex-col sm:flex-row gap-y-8 justify-evenly w-full h-full'>
-      <div className="flex flex-col space-y-2">
-        <h1 className='font-700 text-[25px] mb-2'>Shopit</h1>
-        <div className='flex items-center space-x-2'>
+      <div className="flex flex-col space-y-4">
+        <h1 className='font-700 text-[25px] mb-4'>Shopit</h1>
+        <div className='flex items-center space-x-2 border-b-[1px] border-b-[#8236ff] pb-2'>
           <Image src="/location.svg" alt='social' width={24} height={24} />
-          <p className='font-[500] text-[16px]'>165 Main Street Sunnyvale</p>
+          <p className='font-[500] text-[16px] '>165 Main Street Lekki</p>
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-2  border-b-[1px] border-b-[#8236ff] pb-2'>
           <Image src="/sms.svg" alt='social' width={24} height={24} />
-          <p className='font-[500] text-[16px]'>1Info@sunnyvale.com</p>
+          <p className='font-[500] text-[16px]'>Info@shopit.com</p>
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-2 border-b-[1px] border-b-[#8236ff] pb-2'>
           <Image src="/call.svg" alt='social' width={24} height={24} />
           <p className='font-[500] text-[16px]'>+234 9075643219</p>
         </div>

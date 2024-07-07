@@ -26,7 +26,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
                 src={item.img}
                 width={58}
                 height={75}
-                alt="image" />
+                alt="image"  className="bg-gray-400"/>
               <h1 className="text-[16px] font-[500] ">{item.title}</h1></div>
             <div className="text-[16px] font-[500] w-[55px] md:w-[86px] ">Blue</div>
             <div className="text-[16px] font-[500]  w-[50px] md:w-[86px]">XL</div>
