@@ -1,58 +1,59 @@
 export const products = [
-  {
-      "id": 1,
-      "title": "Blue glitter gown",
-      "description": "A timeless glitter gown made from 100% organic silk.",
-      "price": 10.00,
-      "img": "/1.png",
-      category:"dinner"
-  },
-  {
-      "id": 2,
-      "title": "Peplum gown",
-      "description": "Comfortable blue peplum gown with a slim fit.",
-      "price": 40.00,
-      "img": "/2.png",
-      category:"dinner"
-  },
-  {
-      "id": 3,
-      "title": "Black dinner dress",
-      "description": "Stylish black dinner dress, perfect for any occasion.",
-      "price": 120.00,
-      "img": "/6.png"
-  },
-  {
-      "id": 4,
-      "title": "Black party dress",
-      "description": "Light and breezy black party dress, ideal for party days.",
-      "price": 30.00,
-      "img": "/4.png",
-      category:"dinner"
-  },
-  {
-      "id": 5,
-      "title": "Flayed summer dress",
-      "description": "Cozy summer dress made from a soft chiffon blend.",
-      "price": 34.00,
-      "img": "/5.png",
-      category:"casual"
-  },
-  {
-      "id": 6,
-      "title": "Black straight dress",
-      "description": "Fashionable black straight dres with a modern fit.",
-      "price": 45.00,
-      "img": "/6.png",
-      category:"dinner"
-  },
+    {
+        "id": 1,
+        "title": "EcoElegance Gown",
+        "description": "A timeless EcoElegance Gown made from 100% organic silk.",
+        "price": 10.00,
+        "img": "/13.png",
+        category:"trending"
+    },
+    {
+        "id": 2,
+        "title": "Peplum gown",
+        "description": "Comfortable blue peplum gown with a slim fit.",
+        "price": 40.00,
+        "img": "/14.png",
+        category:"trending"
+    },
+    {
+        "id": 3,
+        "title": "Black dinner dress",
+        "description": "Stylish Grace Gown, perfect for any occasion.",
+        "price": 120.00,
+        "img": "/15.png",
+         category:"trending"
+    },
+    {
+        "id": 4,
+        "title": "Blacknight Gown",
+        "description": "Light and breezy Blacknight Gown, ideal for night.",
+        "price": 30.00,
+        "img": "/16.png",
+        category:"trending"
+    },
+    {
+        "id": 5,
+        "title": "Demin Gown",
+        "description": "Cozy summer gown made from a soft denim blend.",
+        "price": 34.00,
+        "img": "/17.png",
+        category:"trending"
+    },
+    {
+        "id": 6,
+        "title": "Flora Gown",
+        "description": "Fashionable Flora Gown with a modern fit.",
+        "price": 45.00,
+        "img": "/18.png",
+        category:"trending"
+    },
   {
       "id": 7,
-      "title": "Bluey sleeved dress",
-      "description": "Classic sleeved dress for a clean and party look.",
+      "title": "Cinda Gown",
+      "description": "Classic Cinda Gown for a clean and party look.",
       "price": 50.00,
       "img": "/7.png",
-      category:"dinner"
+      category:"trending"
   },
   {
       "id": 8,
@@ -60,7 +61,7 @@ export const products = [
       "description": "Comfortable blue flannel dress, perfect for summer.",
       "price": 20.00,
       "img": "/8.png",
-      category:"casual"
+      category:"trending"
   },
   {
       "id": 9,
@@ -94,60 +95,51 @@ export const products = [
       "img": "/12.png",
       category:"dinner"
   },
-  // {
-  //     "id": 13,
-  //     "title": "Blue Polo Shirt",
-  //     "description": "Casual blue polo shirt made from breathable fabric.",
-  //     "price": 22.00,
-  //     "img": "https://example.com/images/blue_polo_shirt.jpg"
-  // },
-  // {
-  //     "id": 14,
-  //     "title": "Black Dress Pants",
-  //     "description": "Classic black dress pants with a modern fit.",
-  //     "price": 44.00,
-  //     "img": "https://example.com/images/black_dress_pants.jpg"
-  // },
-  // {
-  //     "id": 15,
-  //     "title": "Grey Cardigan",
-  //     "description": "Soft grey cardigan, perfect for layering over any outfit.",
-  //     "price": 30.00,
-  //     "img": "https://example.com/images/grey_cardigan.jpg"
-  // },
-  // {
-  //     "id": 16,
-  //     "title": "Red Baseball Cap",
-  //     "description": "Bold red baseball cap with adjustable strap.",
-  //     "price": 12.00,
-  //     "img": "https://example.com/images/red_baseball_cap.jpg"
-  // },
-  // {
-  //     "id": 17,
-  //     "title": "Blue Jeans Jacket",
-  //     "description": "Classic blue jeans jacket, perfect for a casual look.",
-  //     "price": 50.00,
-  //     "img": "https://example.com/images/blue_jeans_jacket.jpg"
-  // },
-  // {
-  //     "id": 18,
-  //     "title": "White Tank Top",
-  //     "description": "Simple white tank top, great for layering or wearing alone.",
-  //     "price": 0.00,
-  //     "img": "https://example.com/images/white_tank_top.jpg"
-  // },
-  // {
-  //     "id": 10,
-  //     "title": "Green Maxi Dress",
-  //     "description": "Flowy green maxi dress, perfect for a beach day.",
-  //     "price": 40.00,
-  //     "img": "https://example.com/images/green_maxi_dress.jpg"
-  // },
-  // {
-  //     "id": 20,
-  //     "title": "Brown Leather Belt",
-  //     "description": "Classic brown leather belt, perfect for any outfit.",
-  //     "price": 10.00,
-  //     "img": "https://example.com/images/brown_leather_belt.jpg"
-  // }
+  {
+    "id": 13,
+    "title": "Blue glitter gown",
+    "description": "A timeless glitter gown made from 100% organic silk.",
+    "price": 10.00,
+    "img": "/1.png",
+    category:"dinner"
+},
+{
+    "id": 14,
+    "title": "Peplum gown",
+    "description": "Comfortable blue peplum gown with a slim fit.",
+    "price": 40.00,
+    "img": "/2.png",
+    category:"dinner"
+},
+{
+    "id": 15,
+    "title": "Black dinner dress",
+    "description": "Stylish black dinner dress, perfect for any occasion.",
+    "price": 120.00,
+    "img": "/6.png"
+},
+{
+    "id": 16,
+    "title": "Black party dress",
+    "description": "Light and breezy black party dress, ideal for party days.",
+    "price": 30.00,
+    "img": "/4.png",
+    category:"dinner"
+},
+{
+    "id": 17,
+    "title": "Flayed summer dress",
+    "description": "Cozy summer dress made from a soft chiffon blend.",
+    "price": 34.00,
+    "img": "/5.png",
+    category:"casual"
+},
+{
+    "id": 18,
+    "title": "Black straight dress",
+    "description": "Fashionable black straight dres with a modern fit.",
+    "price": 45.00,
+    "img": "/6.png",
+    category:"dinner"
+},
 ]

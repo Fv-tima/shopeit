@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function ProductsCon() {
   return (
-    <div className='py-[20px] px-[40px]'>
+    <div className='py-[20px] px-[20px]'>
       <div className="flex flex-col md:flex-row items-center gap-y-4 md:gap-0 md:justify-between p-4">
         <div className="flex space-x-2">
           <h1 className='font-[700] text-[31.25px]'>52,082+ Items </h1>

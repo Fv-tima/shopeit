@@ -18,7 +18,7 @@ export default function Page({ params }: { params: ProdDetails }) {
   const click = () => {
     setFav(!fav)
   }
-  const {  getItemQuantity, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
   const product: any = products.find((item) => (item.id) === parseInt(params.productId))
   const similar = products.filter((item) => ((item.category) === (product.category)) && (item.id) !== (product.id))
   return (
@@ -68,14 +68,15 @@ export default function Page({ params }: { params: ProdDetails }) {
             <div className="flex space-x-2 items-center">
               <button onClick={() => increaseCartQuantity(product.id)} className=" text-[16px] font-medium text-white bg-[#251F73] p-2 rounded-md flex items-center space-x-2"><Image src="/car1.svg" alt='fav' width={24} height={24} /> <span>Add cart</span></button>
               <div className="flex space-x-2 items-center">
-              <button className="text-black text-[16px] font-medium p-2 rounded-md border border-[#251f73] flex items-center space-x-2">Buy Now</button>
-              <Image src="/heart2.svg" alt='fav' width={24} height={24} />
+                <Link href="/">
+                  <button className="text-black text-[16px] font-medium p-2 rounded-md border border-[#251f73] flex items-center space-x-2">Buy Now</button></Link>
+                <Image src="/heart2.svg" alt='fav' width={24} height={24} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Description/>
+      <Description />
       <h1 className="font-500 text-[31.25px] p-6"> Review For Verified</h1>
       <div className="flex flex-col md:flex-row justify-evenly items-start p-4 space-y-6 md:space-y-0">
         <Image src="/Review.png" alt='review' width={606} height={293} />
@@ -84,60 +85,60 @@ export default function Page({ params }: { params: ProdDetails }) {
       <div>
         <div className="py-4">
           <h1 className="font-[700] text-[39.06px] p-4">Similar product</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center items-center gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[40px]">{similar.map((item) => (
-             <div className='flex' key={item.id}>
-             <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
-               <div>
-                 <Link href={`/products/${product.id}`}>
-                   <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
-                 </Link>
-               </div>
-               <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
-               <div className="flex justify-between w-full">
-                 <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
-                 <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
-               </div>
-               <div className="flex justify-between w-full">
-                 <div className="flex space-x-1">
-                   <Image src="/star.png" alt='star' width={24} height={24} />
-                   <h2>4.5</h2>
-                 </div>
-                 <button onClick={() => increaseCartQuantity(product.id)} >
-                 <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
-                 </button>
-               </div>
-             </div>
-       
-           </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center items-center gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[20px]">{similar.map((item) => (
+            <div className='flex' key={item.id}>
+              <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
+                <div>
+                  <Link href={`/products/${product.id}`}>
+                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                  </Link>
+                </div>
+                <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
+                <div className="flex justify-between w-full">
+                  <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
+                  <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
+                </div>
+                <div className="flex justify-between w-full">
+                  <div className="flex space-x-1">
+                    <Image src="/star.png" alt='star' width={24} height={24} />
+                    <h2>4.5</h2>
+                  </div>
+                  <button onClick={() => increaseCartQuantity(product.id)} >
+                    <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
+                  </button>
+                </div>
+              </div>
+
+            </div>
           ))}</div>
         </div>
         <div className="py-4">
           <h1 className="font-[700] text-[39.06px] p-4">Most View by Customer</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center  gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[40px]">{similar.map((item) => (
-             <div className='flex' key={item.id}>
-             <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
-               <div>
-                 <Link href={`/products/${product.id}`}>
-                   <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
-                 </Link>
-               </div>
-               <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
-               <div className="flex justify-between w-full">
-                 <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
-                 <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
-               </div>
-               <div className="flex justify-between w-full">
-                 <div className="flex space-x-1">
-                   <Image src="/star.png" alt='star' width={24} height={24} />
-                   <h2>4.5</h2>
-                 </div>
-                 <button onClick={() => increaseCartQuantity(product.id)} >
-                 <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
-                 </button>
-               </div>
-             </div>
-       
-           </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center  gap-x-5 md:gap-x-8 gap-y-12 py-[20px] px-[20px]">{similar.map((item) => (
+            <div className='flex' key={item.id}>
+              <div className='flex flex-col w-[165px] h-[310px] space-y-2'>
+                <div>
+                  <Link href={`/products/${product.id}`}>
+                    <Image src={item.img} alt='' width={164} height={215} className='rounded-md h-[215px] bg-gray-400' />
+                  </Link>
+                </div>
+                <h2 className='font-[500] text-[14.8px]'>{product.title}</h2>
+                <div className="flex justify-between w-full">
+                  <h3 className=' font-[300] text-[12px]'>$ {product.price} <br /><span className='text-gray-400 line-through'>${product.price}</span></h3>
+                  <h4 className="text-[10px] text-red-400 mt-auto ">20%</h4>
+                </div>
+                <div className="flex justify-between w-full">
+                  <div className="flex space-x-1">
+                    <Image src="/star.png" alt='star' width={24} height={24} />
+                    <h2>4.5</h2>
+                  </div>
+                  <button onClick={() => increaseCartQuantity(product.id)} >
+                    <Image src="/cart.svg" alt='cart' width={24} height={24} className='pointer' />
+                  </button>
+                </div>
+              </div>
+
+            </div>
           ))}</div>
         </div>
       </div>
