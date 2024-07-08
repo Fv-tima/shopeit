@@ -178,7 +178,7 @@ export default function Page() {
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="card">Card Number</label>
-                  <input type="number" name="" id="card" required placeholder="Enter Card 16-19 digit number" className='lg:w-[350px]  md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
+                  <input type="number" name="" id="card" required placeholder="Enter Card number" className='lg:w-[350px]  md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
                   <Image
                     src="/card.png"
                     width={24}
