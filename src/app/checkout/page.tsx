@@ -81,7 +81,7 @@ export default function Page() {
       <div className=" text-white p-[40px] text-center bg-[#251f73]">
         <h1 className="font-[700] text-[60px]">Checkout</h1>
       </div>
-      <div className= { `p-10 relative bg-white ${openModal ? 'bg-[#5a1516]' : ""}`}>
+      <div className={`p-10 relative bg-white ${openModal ? 'bg-[#5a1516]' : ""}`}>
         <h1 className="font-[500] text-[31.25px] p-4">Product Details</h1>
         <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly items-start">
           <div className="flex flex-col my-6 gap-y-6  ">
@@ -131,10 +131,10 @@ export default function Page() {
                 <label htmlFor="address">Address</label>
                 <input type="text" name="" id="address" required placeholder="Enter your Address " className='w-full p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.address} />
                 <Image
-                    src="/ast.svg"
-                    width={8}
-                    height={8}
-                    alt="card" className='absolute top-2 right-2' />
+                  src="/ast.svg"
+                  width={8}
+                  height={8}
+                  alt="card" className='absolute top-2 right-2' />
               </div>
               <div className="flex gap-6 flex-col md:flex-row">
                 <div className='flex flex-col relative'>
@@ -159,21 +159,49 @@ export default function Page() {
             </div>
             <h1 className="font-[500] text-[31.25px] mt-4">Payment Method</h1>
             <p className="font-[500] text-[12.8px] my-2">Select a Payment Method</p>
-            <div className="flex flex-col gap-y-6 justify-center">
-              {method.map((item) => (
-                <div className="flex justify-between w-[300px]" key={item.id}>
-                  <div className="flex space-x-2  ">
-                    <Image
-                      src={item.image}
-                      width={24}
-                      height={24}
-                      alt="card" />
-                    <h1 className='font-[400] text-[16px] hover:text-[#251f73]'>{item.title}</h1>
-                  </div>
-                  <input type="checkbox" name="" id="" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
-                </div>
-              ))}
-            </div>
+            <fieldset className='flex gap-y-4 flex-col'>
+              <div className="flex justify-between w-[300px]">
+                <div className="flex space-x-2  ">
+                  <Image
+                    src="/card.png"
+                    width={24}
+                    height={24}
+                    alt="card" />
+                  <label htmlFor="card" className='font-[400] text-[16px] hover:text-[#251f73]'>Debit/Credit Card</label></div>
+                <input type="radio" name="option" id="card" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
+              </div>
+              <div className="flex justify-between w-[300px]">
+                <div className="flex space-x-2  ">
+                  <Image
+                    src="/vec.png"
+                    width={24}
+                    height={24}
+                    alt="card" />
+                  <label htmlFor="internet" className='font-[400] text-[16px] hover:text-[#251f73]'>Internet Banking</label></div>
+                <input type="radio" name="option" id="internet" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
+              </div>
+              <div className="flex justify-between w-[300px]">
+                <div className="flex space-x-2  ">
+                  <Image
+                    src="/vec.png"
+                    width={24}
+                    height={24}
+                    alt="card" />
+                  <label htmlFor="bank" className='font-[400] text-[16px] hover:text-[#251f73]'>Bank</label></div>
+                <input type="radio" name="option" id="bank" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
+              </div>
+              <div className="flex justify-between w-[300px]">
+                <div className="flex space-x-2  ">
+                  <Image
+                    src="/phone.png"
+                    width={24}
+                    height={24}
+                    alt="card" />
+                  <label htmlFor="option1" className='font-[400] text-[16px] hover:text-[#251f73]'>USSD</label></div>
+                <input type="radio" name="option" id="ussd" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
+              </div>
+
+            </fieldset>
             <div className='grid gap-6 mt-5'>
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">

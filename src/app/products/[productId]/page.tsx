@@ -44,24 +44,24 @@ export default function Page({ params }: { params: ProdDetails }) {
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[25px]">Colors</h1>
               <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
-                <button className="text-white text-[16px] font-medium p-2 rounded-md bg-[#251f73] flex items-center space-x-2"> <Image src="/tick-.svg" alt='fav' width={24} height={24} /> <span>Blue</span></button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Yellow</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Black</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Orange</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">White</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Brown</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Green</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">Purple</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Blue</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Yellow</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Black</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Orange</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">White</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Brown</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Green</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">Purple</button>
               </div>
             </div>
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[25px]">Size</h1>
               <div className="grid grid-cols-3 gap-2">
-                <button className="text-white text-[16px] font-medium p-2 rounded-md bg-[#251f73] flex items-center space-x-2"> <Image src="/tick-.svg" alt='fav' width={24} height={24} /> <span>XL</span></button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">S</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">M</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">XXL</button>
-                <button className="text-black text-[16px] font-medium hover:text-white hover:bg-[#251F73] p-2 w-full rounded-md border">L</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border"> <span>XL</span></button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">S</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">M</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">XXL</button>
+                <button className="text-black text-[16px] font-medium focus:text-white focus:bg-[#251F73] p-2 w-full rounded-md border">L</button>
               </div>
             </div>
             <div className="flex space-x-2 text-md"><button className="px-2 bg-black text-white rounded-md" onClick={() => decreaseCartQuantity(product.id)}>-</button><span>{getItemQuantity(product.id)}</span><button className="px-2 bg-black text-white rounded-md" onClick={() => increaseCartQuantity(product.id)}>+</button>
