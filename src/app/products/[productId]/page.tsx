@@ -33,7 +33,7 @@ export default function Page({ params }: { params: ProdDetails }) {
             alt='images'
             width={530}
             height={649}
-            className='rounded-md w-[342px] h-[369px] md:w-[400px] md:h-[500px] lg:w-[530px] lg:h-[649px] bg-[#EBF3FE]' />
+            className='rounded-md w-[342px] h-[369px] md:w-[400px] md:h-[500px] lg:w-[530px] lg:h-[649px] bg-gray-200' />
           <div className="flex flex-col gap-y-4 lg:gap-y-8">
             <div className="flex flex-col gap-y-2">
               <h1 className="font-[500] text-[20px]">{product.title}</h1>
