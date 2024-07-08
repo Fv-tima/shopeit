@@ -81,7 +81,7 @@ export default function Page() {
       <div className=" text-white p-[40px] text-center bg-[#251f73]">
         <h1 className="font-[700] text-[60px]">Checkout</h1>
       </div>
-      <div className= { `p-10 relative bg-white ${openModal ? 'bg-[#5a151655]' : ""}`}>
+      <div className= { `p-10 relative bg-white ${openModal ? 'bg-[#5a1516]' : ""}`}>
         <h1 className="font-[500] text-[31.25px] p-4">Product Details</h1>
         <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly  items-start">
           <div className="flex flex-col my-6 gap-y-6 w-1/2">
@@ -148,7 +148,7 @@ export default function Page() {
                 </div>
                 <div className='flex flex-col relative'>
                   <label htmlFor="city">City</label>
-                  <input type="text" name="" id="city" required placeholder="Enter your City " className='lg:w-[350px] w-full md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.city} />
+                  <input type="text" name="" id="city" required placeholder="Enter your City " className='lg:w-[350px] pr-10 md:w-350px p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.city} />
                   <Image
                     src="/ast.svg"
                     width={8}
@@ -178,7 +178,7 @@ export default function Page() {
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
                   <label htmlFor="card">Card Number</label>
-                  <input type="number" name="" id="card" required placeholder="Enter card 16-19 digit number" className='lg:w-[350px]  md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
+                  <input type="number" name="" id="card" required placeholder="Enter Card 16-19 digit number" className='lg:w-[350px]  md:w-350px pl-10 p-4 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.card} />
                   <Image
                     src="/card.png"
                     width={24}

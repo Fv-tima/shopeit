@@ -12,7 +12,7 @@ export const products = [
         "title": "Peplum gown",
         "description": "Comfortable blue peplum gown with a slim fit.",
         "price": 40.00,
-        "img": "/14.png",
+        "img": "/9.png",
         category:"trending"
     },
     {
