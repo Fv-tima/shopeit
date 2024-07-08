@@ -19,7 +19,7 @@ export default function Nav() {
     setOpenNav((prev) => !prev);
   };
   return (
-    <nav className="py-[20px] px-[40px]">
+    <nav className="py-[20px] px-[40px] fixed bg-[#fffffc] w-full md:h-20 top-0 z-50">
       <div className="flex justify-between items-center h-10">
         <Link href="/">
           <Image
@@ -75,7 +75,7 @@ export default function Nav() {
       </div>
       {openNav && (
         <div className="md:hidden mt-4 h-screen justify-start flex flex-col" >
-          <div className="flex flex-col space-y-[16px] mt-6" onClick={open}>
+          <div className="flex flex-col space-y-[16px] items-start  mt-6" onClick={open}>
             {navItems.map((item) => (
               <ul key={item.id} >
                  <Link href={item.link}><li className={`text-black text-[16px] font-medium hover:text-white  p-2 w-full hover:rounded-md hover:bg-[#251f73] ${pathname === item.link ? 'bg-[#251F73] rounded-md text-white ' :""} `}>{item.item}

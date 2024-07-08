@@ -24,7 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <ShoppingCartProvider>
       <body className={inter.className}>
-        <Nav />{children}
+        <Nav />
+        <div className="relative z-0 mt-24">
+        {children}
+        </div>
         <Newsletter/>
         <Footer/></body>
         </ShoppingCartProvider>
