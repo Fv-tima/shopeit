@@ -83,8 +83,8 @@ export default function Page() {
       </div>
       <div className= { `p-10 relative bg-white ${openModal ? 'bg-[#5a1516]' : ""}`}>
         <h1 className="font-[500] text-[31.25px] p-4">Product Details</h1>
-        <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly  items-start">
-          <div className="flex flex-col my-6 gap-y-6 w-1/2">
+        <form action="" onSubmit={handleSubmit} className="flex lg:flex-row flex-col justify-evenly items-start">
+          <div className="flex flex-col my-6 gap-y-6  ">
             <div className='grid gap-6 w-full'>
               <div className='flex gap-6 w-full flex-col md:flex-row'>
                 <div className="flex flex-col relative">
