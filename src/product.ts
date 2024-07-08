@@ -12,7 +12,7 @@ export const products = [
         "title": "Peplum gown",
         "description": "Comfortable blue peplum gown with a slim fit.",
         "price": 40.00,
-        "img": "/9.png",
+        "img": "/14.png",
         category:"trending"
     },
     {
@@ -28,7 +28,7 @@ export const products = [
         "title": "Blacknight Gown",
         "description": "Light and breezy Blacknight Gown, ideal for night.",
         "price": 30.00,
-        "img": "/16.png",
+        "img": "/9.png",
         category:"trending"
     },
     {
