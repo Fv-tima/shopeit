@@ -53,12 +53,12 @@ export default function CartItem({ id, quantity }: CartItemProps) {
           height={75}
           alt="image" className="bg-gray-200 rounded-lg h-auto" />
         <div className="flex flex-col justify-between ">
-          <h1 className="text-[16px] font-[500] ">{item.title}</h1>
+          <h1 className="text-[16px] font-[500] min-w-[120px] ">{item.title}</h1>
           <p className="text-[8.19px] font-[400]">Blue</p>
           <p className="text-[8.19px] font-[400]">XL</p>
           <p className="text-[12.8px] text-[#251f73] font-[400]">${item.price * quantity}</p>
         </div>
-        <div className="flex flex-col justify-between w-full items-end">
+        <div className="flex flex-col justify-between gap-y-4 w-full items-end">
           <div className="p-2"> <button onClick={() => removeFromCart(item.id)}> <Image
             src="/trash.svg"
             width={24}

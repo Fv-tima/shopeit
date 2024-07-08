@@ -197,7 +197,7 @@ export default function Page() {
               </div>
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
-                  <label htmlFor="exp">Expire Name</label>
+                  <label htmlFor="exp">Expire Date</label>
                   <input type="text" name="" id="exp" required placeholder="MM / YY " className='lg:w-[350px] w-full md:w-350px p-4 pl-10 bg-transparent border rounded-lg border-[#251f73]' onChange={(e) => handle(e)} value={regData.exp} />
                   <Image
                     src="/calendar.png"
