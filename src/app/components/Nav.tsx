@@ -19,7 +19,7 @@ export default function Nav() {
     setOpenNav((prev) => !prev);
   };
   return (
-    <nav className="py-[20px] px-[40px] fixed bg-[#fafafa] w-full md:h-20 top-0 z-50">
+    <nav className="py-[20px] px-[40px] fixed bg-[#fafafa] w-full md:h-20 top-0 z-50 border-b">
       <div className="flex justify-between items-center h-10">
         <Link href="/">
           <Image
