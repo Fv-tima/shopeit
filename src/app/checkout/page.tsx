@@ -159,7 +159,7 @@ export default function Page() {
             </div>
             <h1 className="font-[500] text-[31.25px] mt-4">Payment Method</h1>
             <p className="font-[500] text-[12.8px] my-2">Select a Payment Method</p>
-            <fieldset className='flex gap-y-4 flex-col'>
+            <div className='flex gap-y-4 flex-col'>
               <div className="flex justify-between w-[300px]">
                 <div className="flex space-x-2  ">
                   <Image
@@ -201,7 +201,7 @@ export default function Page() {
                 <input type="radio" name="option" id="ussd" className='appearance-none border-[#251f73] checked:bg-[#251f73] border-2 rounded-full w-6 h-6' />
               </div>
 
-            </fieldset>
+            </div>
             <div className='grid gap-6 mt-5'>
               <div className='flex gap-6 flex-col md:flex-row'>
                 <div className="flex flex-col relative">
